@@ -1,4 +1,5 @@
 
+
 #we use fuction combine 'c' to define vectors
 MyFirstVector<- c(1,45,86,35,21,27)
 MyFirstVector
@@ -43,6 +44,48 @@ z1   #output [1]  6 89 15 70
 w1<-c(5,10,15,20)
 w2<-c(1,2,3,4,5,6,7,8,9)
 w1+w2 #output [1]  6 12 18 24 10 16 22 28 14
+
+#R - Specific programming for loop
+x<-rnorm(5)
+x
+for (i in x) {
+  print(i)
+}
+
+#how to print value of x one by one
+print(x[1])
+print(x[2])
+print(x[3])
+print(x[4])
+print(x[5])
+
+#conventional programming loop
+for (j in 1:5){
+  print(x[j])
+}
+
+#--------------------------------------------2nd part
+#vectorized vs devectorized 
+N<-100
+a<-rnorm(N)
+b<-rnorm(N)
+
+#Vectorized approach
+C<-a*b
+
+#Devectorized approach
+d<-rep(NA,N)# assigning blank spaces/allocatingmemory
+
+for (i in 1:N) {
+  d[i]<-a[i]*b[i]
+}
+
+#Output is same but devectorized is very slow as it need to find the data type every time unlike vectorized where it know that all input are same data type
+
+
+
+
+
 
 
 
