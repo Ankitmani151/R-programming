@@ -82,6 +82,15 @@ for (i in 1:N) {
 
 #Output is same but devectorized is very slow as it need to find the data type every time unlike vectorized where it know that all input are same data type
 
+# use of rnorm()
+#generates random numbers around mean default values mean=0 and sd=1
+rnorm(5,mean = 5,sd = 1) #output [1] 5.836193 4.490093 4.962394 3.415975 4.982117
+
+#use of seq()
+#used for sequence generaton
+seq(from=10,to=20,length.out = 50) #genrates 50numbers between 10 and 20 with step size(from-to/(N-1))
+
+round(sqrt(24),10) #output [1] 4.898979
 
 
 
